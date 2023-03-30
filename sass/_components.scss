@@ -545,6 +545,7 @@
     width: 100%;
     transition: all 0.2s;
   }
+
   &__hidden {
     display: inline-block;
     position: absolute;
@@ -555,6 +556,7 @@
     padding: 2rem 0;
     transition: all 0.2s;
   }
+
   &:hover {
     background-image: linear-gradient(
       to left,
