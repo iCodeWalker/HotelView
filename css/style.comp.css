@@ -1,3 +1,43 @@
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --line: 2px solid var(--color-grey-light-2);
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-1);
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
 .logo {
   height: 3.25rem;
   margin-left: 2rem; }
@@ -85,7 +125,7 @@
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 56.25em) {
     .side-nav {
       display: flex;
       margin-top: 0; } }
@@ -93,10 +133,10 @@
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.8rem; }
-      @media only screen and (max-width: 900px) {
+      @media only screen and (max-width: 56.25em) {
         .side-nav__item:not(:last-child) {
           margin: 0; } }
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 56.25em) {
       .side-nav__item {
         flex: 1; } }
   .side-nav__item::before {
@@ -124,11 +164,11 @@
     align-items: center;
     position: relative;
     z-index: 10; }
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 56.25em) {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: center;
         padding: 2rem; } }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
       .side-nav__link:link, .side-nav__link:visited {
         flex-direction: column;
         padding: 1.5rem 0.5rem; } }
@@ -137,7 +177,7 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
       .side-nav__icon {
         margin-right: 0;
         margin-bottom: 0.7rem;
@@ -149,7 +189,7 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem; }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 56.25em) {
     .legal {
       display: none; } }
 
@@ -162,14 +202,14 @@
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--color-grey-light-2); }
+  border-bottom: var(--line); }
   .overview__heading {
     font-size: 2.75rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
       .overview__heading {
         font-size: 1.8rem;
         padding: 1.25rem 2rem; } }
@@ -196,20 +236,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
       .overview__rating {
         padding: 0 1.5rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
       .overview__rating-average {
         font-size: 1.8rem; } }
   .overview__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
       .overview__rating-count {
         font-size: 0.5rem; } }
 
@@ -253,8 +293,8 @@
   list-style: none;
   margin: 3rem 0;
   padding: 3rem;
-  border-top: 2px solid var(--color-grey-light-2);
-  border-bottom: 2px solid var(--color-grey-light-2);
+  border-top: var(--line);
+  border-bottom: var(--line);
   display: flex;
   flex-wrap: wrap; }
   .list__item {
@@ -275,7 +315,7 @@
         -webkit-mask-size: cover;
         mask-image: url(../img/chevron-thin-right.svg);
         mask-size: cover;
-        background-color: none; } }
+        background-image: none; } }
 
 .recommend {
   font-size: 1.3rem;
@@ -301,8 +341,9 @@
   padding: 3rem;
   margin-bottom: 3rem;
   position: relative;
-  overflow: hidden; }
-  @media only screen and (max-width: 900px) {
+  overflow: hidden;
+  width: 100%; }
+  @media only screen and (max-width: 56.25em) {
     .review {
       margin-bottom: 3rem;
       padding: 2rem; } }
@@ -346,7 +387,7 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 56.25em) {
     .cta {
       padding: 2.5rem 0; } }
   .cta__book-now {
@@ -391,23 +432,6 @@
     outline: none;
     animation: pulsate 1s infinite; }
 
-/*
-COLORS
-
-Primary: #eb2f64
-Primary light: #FF3366
-Primary dark: #BA265D
-
-Grey light 1: #faf9f9
-Grey light 2: #f4f2f2
-Grey light 3: #f0eeee
-Grey light 4: #ccc
-
-Grey dark 1: #333
-Grey dark 2: #777
-Grey dark 3: #999
-
-*/
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
@@ -419,6 +443,7 @@ Grey dark 3: #999
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+  --line: 2px solid var(--color-grey-light-2);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
 
 * {
@@ -496,10 +521,10 @@ body {
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: 2px solid var(--color-grey-light-2); }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 56.25em) {
     .details {
       padding: 3rem; } }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 37.5em) {
     .details {
       flex-direction: column; } }
 
@@ -509,11 +534,11 @@ body {
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem; }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 56.25em) {
     .description {
       margin-right: 3rem;
       padding: 2rem; } }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 37.5em) {
     .description {
       margin-right: 0;
       margin-bottom: 3rem; } }

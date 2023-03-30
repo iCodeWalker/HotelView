@@ -390,8 +390,8 @@
     margin-right: 0.7rem;
 
     //older browser
-    // background-image: url(../img/chevron-thin-right.svg);
-    // background-size: cover;
+    background-image: url(../img/chevron-thin-right.svg);
+    background-size: cover;
 
     // newer browser -masks
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
@@ -400,7 +400,7 @@
       -webkit-mask-size: cover;
       mask-image: url(../img/chevron-thin-right.svg);
       mask-size: cover;
-      background-color: none;
+      background-image: none;
     }
   }
 }
