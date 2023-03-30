@@ -1,3 +1,4 @@
+@import "./base";
 ///////////////////////////////////////
 ////Logo
 
@@ -125,7 +126,7 @@
   list-style: none;
   margin-top: 3.5rem;
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $bp-medium) {
     display: flex;
     margin-top: 0;
   }
@@ -135,11 +136,11 @@
     &:not(:last-child) {
       margin-bottom: 0.8rem;
 
-      @media only screen and (max-width: 900px) {
+      @media only screen and (max-width: $bp-medium) {
         margin: 0;
       }
     }
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $bp-medium) {
       flex: 1;
     }
   }
@@ -179,12 +180,12 @@
     position: relative;
     z-index: 10;
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $bp-medium) {
       justify-content: center;
       padding: 2rem;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-small) {
       flex-direction: column;
       padding: 1.5rem 0.5rem;
     }
@@ -196,7 +197,7 @@
     margin-right: 2rem;
     fill: currentColor;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-small) {
       margin-right: 0;
       margin-bottom: 0.7rem;
       width: 1.5rem;
@@ -213,7 +214,7 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $bp-medium) {
     display: none;
   }
 }
@@ -245,7 +246,7 @@
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-small) {
       font-size: 1.8rem;
       padding: 1.25rem 2rem;
     }
@@ -285,7 +286,7 @@
     justify-content: center;
     align-items: center;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-small) {
       padding: 0 1.5rem;
     }
   }
@@ -295,7 +296,7 @@
     font-weight: 300;
     margin-bottom: -3px;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-small) {
       font-size: 1.8rem;
     }
   }
@@ -304,7 +305,7 @@
     font-size: 0.8rem;
     text-transform: uppercase;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-small) {
       font-size: 0.5rem;
     }
   }
@@ -392,7 +393,7 @@
     // background-image: url(../img/chevron-thin-right.svg);
     // background-size: cover;
 
-    //newer browser -masks
+    // newer browser -masks
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
       background-color: var(--color-primary);
       -webkit-mask-image: url(../img/chevron-thin-right.svg);
@@ -445,7 +446,9 @@
   margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
-  @media only screen and (max-width: 900px) {
+  width: 100%;
+
+  @media only screen and (max-width: $bp-medium) {
     margin-bottom: 3rem;
     padding: 2rem;
   }
@@ -510,7 +513,7 @@
   padding: 3.5rem 0;
   text-align: center;
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: $bp-medium) {
     padding: 2.5rem 0;
   }
 
